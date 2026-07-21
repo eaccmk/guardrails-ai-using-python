@@ -1,6 +1,6 @@
 name: Python PII Guardrail CI
 
-# Trigger this automation workflow on code pushes or pull requests to the main branch
+# Trigger this automation workflow on pull requests to the main branch
 on:
   pull_request:
     branches: [ main ]
