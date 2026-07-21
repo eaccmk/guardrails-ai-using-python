@@ -12,11 +12,11 @@ jobs:
     steps:
     # 1. Check out your code from your repository onto the GitHub runner
     - name: Checkout Code
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
 
     # 2. Force install a compatible version of Python (3.14)
     - name: Set up Python 3.14
-      uses: actions/setup-python@v5
+      uses: actions/setup-python@v6
       with:
         python-version: '3.14'
         cache: 'pip' # Automatically caches your dependencies to speed up future runs
