@@ -1,0 +1,73 @@
+# ==============================================================================
+# 1. Virtual Environments (Supports macOS, Linux, and Windows terminal variants)
+# ==============================================================================
+.venv/
+venv/
+ENV/
+env/
+# Windows explicit environment patterns
+Scripts/
+Include/
+Lib/
+
+# ==============================================================================
+# 2. Python Bytecode, Cache, & Runtime Dumps
+# ==============================================================================
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# ==============================================================================
+# 3. macOS System Artifacts
+# ==============================================================================
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# ==============================================================================
+# 4. Windows OS System Files
+# ==============================================================================
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# ==============================================================================
+# 5. Linux OS & IDE Cache Logs
+# ==============================================================================
+*~
+.fuse_hidden*
+.directory
+.trash/
+
+# ==============================================================================
+# 6. Project Local Logs & Diagnostics
+# ==============================================================================
+*.log
+pip-log.txt
+pip-delete-this-directory.txt
+
+# ==============================================================================
+# 7. Distribution, Compiling, & Package Metadata
+# ==============================================================================
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
