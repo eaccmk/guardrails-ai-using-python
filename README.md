@@ -94,3 +94,22 @@ Create a file at `.github/workflows/ci.yml` like [ci.yml](./.github/workflows/ci
 2. It enforces the required **Python 3.11** environment.
 3. It installs the exact standalone `guardrails-ai-detect-pii` package.
 4. It executes `demo_pii.py` to ensure your privacy validators compile and run seamlessly without breaking the build pipeline.
+
+## 🛑 Guardrails as a Pull Request Blocker (Gatekeeping)
+
+This architecture functions as a security gatekeeper within your development workflow. When integrated into a Pull Request pipeline, it prevents unsafe code or sensitive configurations from being merged into production branches.
+
+### How Guardrails Stops Malicious or Faulty Merges
+In Python, any unhandled error or an explicit `sys.exit(1)` call flags the terminal environment with a non-zero exit status. Because GitHub Actions monitors runtime exit codes, a triggered Guardrail exception will intentionally crash the runner stage.
+
+When this happens:
+1. The **Execute PII Guardrail Script** pipeline step immediately turns red.
+2. GitHub applies a status check block on the Pull Request interface.
+3. The **"Merge pull request"** button is completely locked out, preventing developers from introducing data leaks into protected environments.
+
+### Sample Pipeline Simulation
+You can view a simulated breakdown of how GitHub traps these code exceptions in the repository action log:
+
+👉 **[View Sample Failed Pipeline Run](https://github.com/eaccmk/guardrails-ai-using-python/actions/runs/29862712284/job/88743203584)** *(Sample link demonstrating failed security workflow execution logs)*
+
+![](./wiki/guardrail_pipline_run.png)
