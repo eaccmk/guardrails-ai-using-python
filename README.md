@@ -1,6 +1,6 @@
 > Branch Status
 
-|[main](https://github.com/eaccmk/guardrails-ai-using-python)|[update-yml-comment](https://github.com/eaccmk/guardrails-ai-using-python/tree/doc/update-yml-comment)|
+|[main](https://github.com/eaccmk/guardrails-ai-using-python/tree/main)|[update-yml-comment](https://github.com/eaccmk/guardrails-ai-using-python/tree/doc/update-yml-comment)|
 |:-:|:-:|
 |[![Python PII Guardrail CI](https://github.com/eaccmk/guardrails-ai-using-python/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/eaccmk/guardrails-ai-using-python/actions/workflows/ci.yml)|[![Python PII Guardrail CI](https://github.com/eaccmk/guardrails-ai-using-python/actions/workflows/ci.yml/badge.svg?branch=doc%2Fupdate-yml-comment)](https://github.com/eaccmk/guardrails-ai-using-python/actions/workflows/ci.yml)|
 
