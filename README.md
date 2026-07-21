@@ -76,3 +76,21 @@ During the creation of this project, several configuration boundaries were ident
 5.  **`WARNING:presidio-analyzer:Recognizer not added...`**  
     *   *Cause:* Internal parser trying to bind multilingual profiles (Spanish, Italian, Polish) to an English-only operating system footprint.
     *   *Fix:* Added runtime overrides using Python's `logging` system to filter tracking events lower than `ERROR`.
+
+## 🤖 Continuous Integration (GitHub Actions)
+
+This project includes an automated GitHub Actions CI workflow to verify your PII guardrails on every code push or pull request to the `main` branch. 
+
+> Because it uses local inference, it runs completely free without needing cloud API keys.
+
+### 1. Workflow Configuration
+
+Create a file at `.github/workflows/ci.yml` like [ci.yml](./.github/workflows/ci.yml)
+
+
+### 2. How it Works
+
+1. When code is pushed, GitHub provisions a clean Linux runner.
+2. It enforces the required **Python 3.11** environment.
+3. It installs the exact standalone `guardrails-ai-detect-pii` package.
+4. It executes `demo_pii.py` to ensure your privacy validators compile and run seamlessly without breaking the build pipeline.
